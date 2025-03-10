@@ -55,11 +55,10 @@ python netra.py --target 111.222.111.222 --output test.txt
 
 ### Feature Requests & Bug Reporting
 
-<<<<<<< HEAD
 Want to suggest a new feature? Open a request using our [Feature Request Template](../.github/ISSUE_TEMPLATE/feature-request.yml).
-=======
-Want to suggest a new feature? Open a request using our [Feature Request Template](.github/ISSUE_TEMPLATE/feature-request.yml).
->>>>>>> 513c8c3800e3089a15083b82e83f7d3dc9f48781
+
+Want to suggest a new feature? Open a request using our [Feature Request Template](../.github/ISSUE_TEMPLATE/feature-request.yml).
+
 
 Found a bug? Report it using our [Bug Report Template](.github/ISSUE_TEMPLATE/bug-report.yml).
 
