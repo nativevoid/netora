@@ -6,7 +6,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: Run `toolname --version` and provide the output.
+      description: Run `python netra.py --version` and provide the output.
     validations:
       required: true
   - type: textarea
