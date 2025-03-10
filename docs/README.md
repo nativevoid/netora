@@ -5,10 +5,6 @@
 </p>
 
 <p align="center">
-  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b>
-</p>
-
-<p align="center">
   <img width="70%" height="70%" src="/docs/images/demo.png"/>
 </p>
 
