@@ -1,7 +1,7 @@
 # Netra
 
 <p align="center">
-  <img src="images/test.png">
+  <img src="/docs/images/netra-logo.png">
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 <p align="center">
 
-<img width="70%" height="70%" src="images/demo.png"/>
+<img width="70%" height="70%" src="/docs/images/demo.PNG"/>
 </a>
 </p>
 
