@@ -1,19 +1,18 @@
 # Project Name
 
 <p align="center">
-  <img src="https://via.placeholder.com/500" width="200">
+  <img src="images/netra-logo.png">
 </p>
 
 <p align="center">
-  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with <span style="color:green;">ease</span></b>
+ <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b>
 </p>
 
 <p align="center">
-  <a href="#installation">Installation</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#features">Features</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a>
+  <a href="#installation">Installation</a>
+  &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+  <a href="#usage">Usage</a>
+  &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
 </p>
 
 ---
