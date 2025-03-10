@@ -5,13 +5,11 @@
 </p>
 
 <p align="center">
- <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b><br><br>
+  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b>
 </p>
 
 <p align="center">
-
-<img width="70%" height="70%" src="/docs/images/demo.png"/>
-</a>
+  <img width="70%" height="70%" src="/docs/images/demo.png"/>
 </p>
 
 <p align="center">
@@ -52,7 +50,7 @@ python netra.py --target 111.222.111.222
 python netra.py --target 111.222.111.222 --output test.txt
 ```
 
-
+<br><br>
 ### Feature Requests & Bug Reporting
 
 Want to suggest a new feature? Open a request using our [Feature Request Template](../.github/ISSUE_TEMPLATE/feature-request.yml).
