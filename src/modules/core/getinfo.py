@@ -3,6 +3,8 @@ from datetime import datetime
 
 from data.currencies import currencies
 
+
+
 def sortData(name, data):
     if name not in data or data[name] is None:
         return "Not Found"

@@ -10,7 +10,6 @@ sys.path.append(os.path.normpath(srcDir))
 
 from src.modules.utils.export import exportInfo
 
-
 class TestExportInfo(unittest.TestCase):
     def test_export_info(self):
         file_path = os.path.normpath(os.path.join(currentDir, "data", "mock-output.txt"))
@@ -34,9 +33,7 @@ class TestExportInfo(unittest.TestCase):
             "countryCapital": "Washington, D.C."
         }
 
-        exportInfo(file_path, data)
-
-   
+        exportInfo(file_path, data) 
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.readlines()
 

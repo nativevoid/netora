@@ -4,12 +4,12 @@ import requests
 import sys
 from time import sleep
 
-
 from src.modules.core.getinfo import getIPInfo
 from src.modules.utils.initialize import initialize
 from src.modules.utils.export import exportInfo
 from src.modules.utils.validation import validateIP, validateOutputFile
 from src.modules.utils.useragent import getRandomUserAgent
+
 
 USERAGENT = getRandomUserAgent()
 headers = {
@@ -163,7 +163,6 @@ def main():
             Fore.RED + " Exiting..." + Style.RESET_ALL
       )
       sys.exit(1)
-
 
 if __name__ == "__main__":
     main()

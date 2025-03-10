@@ -8,10 +8,8 @@ srcDir = os.path.join(currentDir, "..")
 srcDir = os.path.normpath(srcDir)
 sys.path.append(os.path.normpath(srcDir))
 
-
 from src.modules.utils.connection import checkConnection
 from src.modules.utils.validation import validateIP
-
 
 targetIP = "8.8.8.8"
 
@@ -31,7 +29,6 @@ class testConnection(unittest.TestCase):
         self.assertTrue(validateIP("8.8.8.8"))
         self.assertFalse(validateIP("256.256.256.256"))
         self.assertFalse(validateIP("abcd"))
-
 
 if __name__ == "__main__":
     unittest.main()
