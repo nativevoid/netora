@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
- <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b>
+ <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b><br><br>
 </p>
 
 <p align="center">
