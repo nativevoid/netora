@@ -9,6 +9,11 @@
 </p>
 
 <p align="center">
+<img width="70%" height="70%" src="images/demo.png"/>
+</a>
+</p>
+
+<p align="center">
   <a href="#installation">Installation</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
   <a href="#usage">Usage</a>
