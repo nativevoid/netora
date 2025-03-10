@@ -8,7 +8,9 @@
  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b>
 </p>
 
+
 <p align="center">
+
 <img width="70%" height="70%" src="images/demo.png"/>
 </a>
 </p>
@@ -54,7 +56,11 @@ python netra.py --target 111.222.111.222 --output test.txt
 
 ### Feature Requests & Bug Reporting
 
+<<<<<<< HEAD
 Want to suggest a new feature? Open a request using our [Feature Request Template](../.github/ISSUE_TEMPLATE/feature-request.yml).
+=======
+Want to suggest a new feature? Open a request using our [Feature Request Template](.github/ISSUE_TEMPLATE/feature-request.yml).
+>>>>>>> 513c8c3800e3089a15083b82e83f7d3dc9f48781
 
 Found a bug? Report it using our [Bug Report Template](.github/ISSUE_TEMPLATE/bug-report.yml).
 
