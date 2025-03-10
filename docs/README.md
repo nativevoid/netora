@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with <span style="color:green"> **ease**</span></b>
+  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with <span style="color:green;">ease</span></b>
 </p>
 
 <p align="center">
