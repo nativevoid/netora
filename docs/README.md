@@ -11,7 +11,7 @@
 
 <p align="center">
 
-<img width="70%" height="70%" src="/docs/images/demo.PNG"/>
+<img width="70%" height="70%" src="/docs/images/demo.png"/>
 </a>
 </p>
 
