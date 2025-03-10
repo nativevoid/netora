@@ -2,20 +2,6 @@ name: Bug Report
 description: Report a bug or issue
 labels: ["bug"]
 body:
-  - type: dropdown
-    id: install-method
-    attributes:
-      label: Installation Method
-      description: |
-        Knowing how you installed the tool helps diagnose issues faster.
-      options:
-        - Select one
-        - PyPI (pip)
-        - Docker
-        - Installed from source
-        - Other (specify below)
-    validations:
-      required: true
   - type: input
     id: version
     attributes:

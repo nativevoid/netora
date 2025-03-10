@@ -47,12 +47,11 @@ python netra.py --target 111.222.111.222 --output test.txt
 ```
 ### Disclaimer
 
-> [!NOTE]  
-> The use of this tool is for  **educational purposes only.**
-> Nativevoid, the developer, does not condone or support any illegal activities.
-> The user is fully responsible for ensuring compliance with all applicable laws.
->
-> By using this tool, you accept all risks, including potential data loss, system crashes, or other damages.
-> Nativevoid is not liable for any consequences, direct or indirect, arising from its use.
->
+The use of this tool is for  **educational purposes only.**
+ativevoid, the developer, does not condone or support any illegal activities.
+The user is fully responsible for ensuring compliance with all applicable laws.
+
+By using this tool, you accept all risks, including potential data loss, system crashes, or other damages.
+Nativevoid is not liable for any consequences, direct or indirect, arising from its use.
+
 > You agree to indemnify and hold Nativevoid harmless from any claims related to the tool’s usage.
