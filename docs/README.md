@@ -1,11 +1,11 @@
 # Project Name
 
 <p align="center">
-  <img src="https://via.placeholder.com/500" alt="Project Logo" width="200">
+  <img src="https://via.placeholder.com/500" width="200">
 </p>
 
 <p align="center">
-  <b>A short project description goes here.</b>
+  <b>An IP lookup tool that returns detailed geographic and network data for any IP address with <span style="color:green"> __ease__</span></b>
 </p>
 
 <p align="center">
