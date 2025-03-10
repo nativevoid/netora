@@ -1,7 +1,7 @@
 # Netra
 
 <p align="center">
-  <img src="images/netra-logo.png">
+  <img src="images/test.png">
 </p>
 
 <p align="center">
