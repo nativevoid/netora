@@ -34,13 +34,13 @@ pip install -r requirements.txt
 
 ### Usage
 
-**Lookup IP address**
+**Lookup an IP address**
 
 ```bash
 python netra.py --target 111.222.111.222
 ```
 
-**Export results to .txt or .md file**
+**Export results to a .txt or .md file**
 
 ```bash
 python netra.py --target 111.222.111.222 --output test.txt
