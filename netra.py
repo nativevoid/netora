@@ -86,7 +86,7 @@ def main():
             IPData = getIPInfo(IPInfo, IPInfo2, IPLocation)
 
          print(Fore.WHITE + Style.BRIGHT + "[" +
-               Fore.GREEN + "\n+" +
+               Fore.GREEN + "+" +
                Fore.WHITE + Style.BRIGHT + "]" + Style.RESET_ALL +
                Fore.GREEN + " Data" +
                Fore.WHITE + Style.BRIGHT + " retrieved successfully" + Style.RESET_ALL
