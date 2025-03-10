@@ -45,13 +45,18 @@ python netra.py --target 111.222.111.222
 ```bash
 python netra.py --target 111.222.111.222 --output test.txt
 ```
+
+### Feature Requests & Bug Reporting
+
+Want to suggest a new feature? Open a request using our [Feature Request Template](.github/ISSUE_TEMPLATE/FEATURE_REQUEST.yml).
+
+Found a bug? Report it using our [Bug Report Template](.github/ISSUE_TEMPLATE/BUG_REPORT.yml).
+
+
 ### Disclaimer
 
-The use of this tool is for  **educational purposes only.**
-ativevoid, the developer, does not condone or support any illegal activities.
-The user is fully responsible for ensuring compliance with all applicable laws.
+This tool is for educational purposes only and is intended to help with IP lookups. Users are responsible for complying with applicable laws.
 
-By using this tool, you accept all risks, including potential data loss, system crashes, or other damages.
-Nativevoid is not liable for any consequences, direct or indirect, arising from its use.
+By using this tool, you accept all risks associated with its use. Nativevoid is not liable for any consequences resulting from using this tool.
 
-> You agree to indemnify and hold Nativevoid harmless from any claims related to the tool’s usage.
+
