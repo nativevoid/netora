@@ -1,4 +1,4 @@
-# Project Name
+# Netra
 
 <p align="center">
   <img src="images/netra-logo.png">
@@ -17,18 +17,42 @@
 
 ---
 
-## 🚀 Features
+### Installation
 
-- ✅ **Easy to use**
-- 🔥 **Fast and lightweight**
-- 💻 **Cross-platform support**
-- 🌍 **Open-source and community-driven**
+**Clone the repository**
 
-## 📦 Installation
+```bash
+git clone https://github.com/nativevoid/Netra
+cd Netra
+```
+
+**Install requirements**
+
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+**Lookup IP address**
+
+'''bash
+python netra.py --target 111.222.111.222
+'''
+
+**Export results to .txt or .md file**
+
+'''bash
+python netra.py --target 111.222.111.222 --output test.txt
+'''
+### Disclaimer
 
 > [!NOTE]  
-> Make sure you have Python installed before proceeding.
-
-### Using pip:
-```bash
-pip install project-name
+> The use of this tool is for  **educational purposes only.**
+> Nativevoid, the developer, does not condone or support any illegal activities.
+> The user is fully responsible for ensuring compliance with all applicable laws.
+>
+> By using this tool, you accept all risks, including potential data loss, system crashes, or other damages.
+> Nativevoid is not liable for any consequences, direct or indirect, arising from its use.
+>
+> You agree to indemnify and hold Nativevoid harmless from any claims related to the tool’s usage.
