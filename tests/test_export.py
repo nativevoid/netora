@@ -20,19 +20,19 @@ class TestExportInfo(unittest.TestCase):
             "ip": "192.168.1.1",
             "ipv": "IPv4",
             "isp": "ExampleISP",
-            "continentCode": "NA",
-            "continentName": "North America",
+            "continent_code": "NA",
+            "continent_name": "North America",
             "country": "USA",
-            "phoneCode": "+1",
+            "phone_code": "+1",
             "city": "New York",
-            "countryCode": "US",
+            "country_code": "US",
             "latitude": 40.7128,
             "longitude": -74.0060,
-            "locationLink": "http://example.com",
-            "currencyName": "USD",
-            "currencySymbol": "$",
-            "localTime": "2025-03-10 14:00:00",
-            "countryCapital": "Washington, D.C.",
+            "location_link": "http://example.com",
+            "currency_name": "USD",
+            "currency_symbol": "$",
+            "local_time": "2025-03-10 14:00:00",
+            "country_capital": "Washington, D.C.",
         }
 
         export_info(file_path, data) 
@@ -43,15 +43,18 @@ class TestExportInfo(unittest.TestCase):
 
         self.assertTrue("ip: 192.168.1.1" in content)
         self.assertTrue("isp: ExampleISP" in content)
-        self.assertTrue("continentCode: NA" in content)
+        self.assertTrue("continent_code: NA" in content)
         self.assertTrue("city: New York" in content)
         self.assertTrue("latitude: 40.7128" in content)
         self.assertTrue("longitude: -74.0060" in content)
-        self.assertTrue("currencyName: USD" in content)
-        self.assertTrue("countryCapital: Washington, D.C." in content)
+        self.assertTrue("currency_name: USD" in content)
+        self.assertTrue("country_capital: Washington, D.C." in content)
 
     def tearDown(self):
-        file_path = os.path.normpath(os.path.join(current_dir, "data", "mock-output.txt"))
+        file_path = os.path.normpath(
+            os.path.join(current_dir, "data", "mock-output.txt")
+        )
+
         if os.path.exists(file_path):
             os.remove(file_path)
 
