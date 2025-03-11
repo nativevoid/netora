@@ -54,7 +54,6 @@ class TestExportInfo(unittest.TestCase):
         file_path = os.path.normpath(
             os.path.join(current_dir, "data", "mock-output.txt")
         )
-
         if os.path.exists(file_path):
             os.remove(file_path)
 

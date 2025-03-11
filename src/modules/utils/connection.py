@@ -10,7 +10,6 @@ def check_connection(host):
 
     try:         
         output = subprocess.check_output(command, stderr=subprocess.STDOUT, universal_newlines=True)
-
         if os.name == "nt":      
             if "Received = 1" in output:
                 pass

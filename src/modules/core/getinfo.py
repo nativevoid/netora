@@ -1,4 +1,3 @@
-import pytz
 import datetime
 
 from data.currencies import currencies
