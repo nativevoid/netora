@@ -9,15 +9,16 @@
 </p>
 
 <p align="center">
-  <img src="/docs/images/demo.png">
-
-
-<p align="center">
   <a href="#installation">Installation</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
   <a href="#usage">Usage</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
 </p>
+
+
+<p align="center">
+  <img src="/docs/images/demo.png">
+
 
 ---
 
