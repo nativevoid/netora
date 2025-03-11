@@ -24,7 +24,7 @@ class TestConnection(unittest.TestCase):
             result = False
         self.assertTrue(result)
 
-    def test_validate_IP(self):
+    def test_validate_ip(self):
         self.assertTrue(validate_ip("8.8.8.8"))
         self.assertFalse(validate_ip("256.256.256.256"))
         self.assertFalse(validate_ip("abcd"))
