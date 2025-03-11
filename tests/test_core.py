@@ -17,7 +17,7 @@ class TestConnection(unittest.TestCase):
 
     def test_check_connection(self):
         try:
-            checkConnection(targetIP)
+            check_connection(targetIP)
             result = True
 
         except SystemExit: 
@@ -25,9 +25,9 @@ class TestConnection(unittest.TestCase):
         self.assertTrue(result)
 
     def test_validate_IP(self):
-        self.assertTrue(validateIP("8.8.8.8"))
-        self.assertFalse(validateIP("256.256.256.256"))
-        self.assertFalse(validateIP("abcd"))
+        self.assertTrue(validate_ip("8.8.8.8"))
+        self.assertFalse(validate_ip("256.256.256.256"))
+        self.assertFalse(validate_ip("abcd"))
 
 if __name__ == "__main__":
     unittest.main()
