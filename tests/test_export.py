@@ -12,7 +12,9 @@ from src.modules.utils.export import export_info
 
 class TestExportInfo(unittest.TestCase):
     def test_export_info(self):
-        file_path = os.path.normpath(os.path.join(current_dir, "data", "mock-output.txt"))
+        file_path = os.path.normpath(
+            os.path.join(current_dir, "data", "mock-output.txt")
+        )
         
         data = {
             "ip": "192.168.1.1",
