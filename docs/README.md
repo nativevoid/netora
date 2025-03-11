@@ -65,7 +65,7 @@ Want to suggest a new feature? Open a request using our [Feature Request Templat
 
 Found a bug? Report it using our [Bug Report Template](../.github/ISSUE_TEMPLATE/bug-report.yaml).
 
-
+<br>
 ### Disclaimer
 
 This tool is for educational purposes only and is intended to help with IP lookups. Users are responsible for complying with applicable laws.
