@@ -146,9 +146,7 @@ def main():
                 Fore.GREEN + "Local time:" +
                 Fore.WHITE + Style.BRIGHT + f" {IPData['local_time']}" + "\n" + Style.RESET_ALL +
              
-                Fore.GREEN + "\n\n\n" +
-                f"{'=' * 95}" + 
-                "\n" + Style.RESET_ALL,  
+                Fore.GREEN + "\n\n\n" + f"{'=' * 95}" + "\n" + Style.RESET_ALL,  
                 flush=True
             )
 
