@@ -2,19 +2,18 @@ import sys
 import os
 import unittest
 
-currentDir = os.path.dirname(__file__)
-srcDir = os.path.join(currentDir, "..")
+current_dir = os.path.dirname(__file__)
+src_dir = os.path.join(current_dir, "..")
 
-srcDir = os.path.normpath(srcDir)
-sys.path.append(os.path.normpath(srcDir))
+src_dir = os.path.normpath(src_dir)
+sys.path.append(os.path.normpath(src_dir))
 
 from src.modules.utils.connection import checkConnection
 from src.modules.utils.validation import validateIP
 
 targetIP = "8.8.8.8"
 
-
-class testConnection(unittest.TestCase):
+class TestConnection(unittest.TestCase):
 
     def test_check_connection(self):
         try:

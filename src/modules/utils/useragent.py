@@ -2,7 +2,7 @@ import random
 import os
 
 
-def getRandomUserAgent():
+def get_user_agent():
     path = os.path.join(
         os.path.join(os.path.dirname(__file__)),
         "..",
@@ -11,5 +11,5 @@ def getRandomUserAgent():
         "data",
         "useragents.txt",
     )
-    userAgents = open(path).read().splitlines()
-    userAgent = random.choice(userAgents)
+    user_agents = open(path).read().splitlines()
+    user_agent = random.choice(user_agents)

@@ -1,7 +1,7 @@
-from colorama import Style, Fore
 import os
 
-from src.modules.utils.connection import checkConnection
+from colorama import Style, Fore
+from src.modules.utils.connection import check_connection
 
 BANNER = '''
                         
@@ -19,19 +19,23 @@ $$ | \$$ |\$$$$$$$\  \$$$$  |$$ |     \$$$$$$$ |
 ==============================================================================================='''
 
 
-def clearTerminal():
-   if os.name == "nt":
-      os.system('cls')
-   else:
-      os.system('clear')
+def clear_terminal():
+    if os.name == "nt":
+        os.system('cls')
+    else:
+        os.system('clear')
 
-def displayBanner():  
-    print(Fore.GREEN + BANNER + Style.RESET_ALL + "\n", flush="True", end='')  
+def display_banner():  
+    print(
+        Fore.GREEN +
+        BANNER +
+        Style.RESET_ALL + "\n", flush=True, end=''
+    )
 
 def initialize(): 
-   clearTerminal()
-   displayBanner()  
-   checkConnection("8.8.8.8")
+   clear_terminal()
+   display_banner()  
+   check_connection("8.8.8.8")
 
   
 

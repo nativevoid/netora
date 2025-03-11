@@ -58,5 +58,5 @@ currencies = {
     "Riel": "៛",
     "Cedi": "₵",
     "Lari": "ლ",
-    "Forint": "Ft"
+    "Forint": "Ft",
 }

@@ -1,4 +1,4 @@
-def exportInfo(export_file, info):
+def export_info(export_file, info):
     with open(export_file, "w") as f:
 
         for key, value in info.items():

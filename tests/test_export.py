@@ -2,17 +2,17 @@ import os
 import unittest
 import sys
 
-currentDir = os.path.dirname(__file__)
-srcDir = os.path.join(currentDir, "..")
+current_dir = os.path.dirname(__file__)
+src_dir = os.path.join(current_dir, "..")
 
-srcDir = os.path.normpath(srcDir)
-sys.path.append(os.path.normpath(srcDir))
+src_dir = os.path.normpath(src_dir)
+sys.path.append(os.path.normpath(src_dir))
 
 from src.modules.utils.export import exportInfo
 
 class TestExportInfo(unittest.TestCase):
     def test_export_info(self):
-        file_path = os.path.normpath(os.path.join(currentDir, "data", "mock-output.txt"))
+        file_path = os.path.normpath(os.path.join(current_dir, "data", "mock-output.txt"))
         
         data = {
             "ip": "192.168.1.1",
@@ -30,7 +30,7 @@ class TestExportInfo(unittest.TestCase):
             "currencyName": "USD",
             "currencySymbol": "$",
             "localTime": "2025-03-10 14:00:00",
-            "countryCapital": "Washington, D.C."
+            "countryCapital": "Washington, D.C.",
         }
 
         exportInfo(file_path, data) 
@@ -49,7 +49,7 @@ class TestExportInfo(unittest.TestCase):
         self.assertTrue("countryCapital: Washington, D.C." in content)
 
     def tearDown(self):
-        file_path = os.path.normpath(os.path.join(currentDir, "data", "mock-output.txt"))
+        file_path = os.path.normpath(os.path.join(current_dir, "data", "mock-output.txt"))
         if os.path.exists(file_path):
             os.remove(file_path)
 
