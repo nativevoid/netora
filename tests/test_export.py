@@ -8,7 +8,7 @@ src_dir = os.path.join(current_dir, "..")
 src_dir = os.path.normpath(src_dir)
 sys.path.append(os.path.normpath(src_dir))
 
-from src.modules.utils.export import exportInfo
+from src.modules.utils.export import export_info
 
 class TestExportInfo(unittest.TestCase):
     def test_export_info(self):
@@ -33,7 +33,7 @@ class TestExportInfo(unittest.TestCase):
             "countryCapital": "Washington, D.C.",
         }
 
-        exportInfo(file_path, data) 
+        export_info(file_path, data) 
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.readlines()
 
