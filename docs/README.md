@@ -8,6 +8,8 @@
   <b>An IP lookup tool that returns detailed geographic and network data for any IP address with ease</b>
 </p>
 
+<br><br>
+
 <p align="center">
   <a href="#installation">Installation</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
