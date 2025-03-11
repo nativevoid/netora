@@ -1,4 +1,5 @@
 import datetime
+import zoneinfo
 
 from data.currencies import currencies
 
@@ -25,14 +26,14 @@ def get_ip_info(ip_info, ip_info2, location_link=""):
     currency_name = sort_data("currency_name", ip_info)
     
     if currency_name == "Not Found":
-        currencySymbol = "Not Found"
+        currency_symbol = "Not Found"
     else:
-        currencySymbol = currencies.get(currency_name, "Currency symbol not found")
+        currency_symbol = currencies.get(currency_name, "Currency symbol not found")
 
     if timezone == "Not Found":
-        localTime = "Not Found"
+        local_time = "Not Found"
     else: 
-        localTime = datetime.datetime.now(pytz.timezone(timezone)).strftime('%H:%M:%S')
+        local_time = datetime.datetime.now(zoneinfo.ZoneInfo(timezone)).strftime('%H:%M:%S')
     
     return {
         "ip": ip,
@@ -48,7 +49,7 @@ def get_ip_info(ip_info, ip_info2, location_link=""):
         "longitude": longitude,
         "location_link": location_link,
         "currency_name": currency_name,
-        "currency_symbol": currencySymbol,
-        "local_time": localTime,
+        "currency_symbol": currency_symbol,
+        "local_time": local_time,
         "country_capital": country_capital,
     }
