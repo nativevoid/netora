@@ -5,14 +5,14 @@ import time
 
 from colorama import Style, Fore
 
-from src.modules.core.getinfo import getIPInfo
+from src.modules.core.getinfo import get_ip_info
 from src.modules.utils.initialize import initialize
-from src.modules.utils.export import exportInfo
-from src.modules.utils.validation import validateIP, validateOutputFile
-from src.modules.utils.useragent import getRandomUserAgent
+from src.modules.utils.export import export_info
+from src.modules.utils.validation import validate_ip, validate_file
+from src.modules.utils.useragent import get_user_agent
 
 
-USERAGENT = getRandomUserAgent()
+USERAGENT = get_user_agent()
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0)', 
 }
@@ -50,7 +50,7 @@ def main():
         exportFile = args.output
 
         time.sleep(2)
-        if not validateIP(targetIP):
+        if not validate_ip(targetIP):
             print(
                 Fore.WHITE + Style.BRIGHT + "\n[" +
                 Fore.RED + "!" +
@@ -60,7 +60,7 @@ def main():
             )
             sys.exit(1)
 
-        if exportFile != None and not validateOutputFile(exportFile):
+        if exportFile != None and not validate_file(exportFile):
             print(
                 Fore.WHITE + Style.BRIGHT + "\n[" +
                 Fore.RED + "!" +
@@ -77,15 +77,15 @@ def main():
             IPInfo = response.json()
             IPInfo2 = response2.json()
 
-            IPData = getIPInfo(IPInfo, IPInfo2)
+            IPData = get_ip_info(IPInfo, IPInfo2)
             IPLocation = f"https://www.openstreetmap.org/?mlat={IPData['latitude']}&mlon={IPData['longitude']}"
             IPLocationResponse = requests.get(IPLocation, headers=headers)
 
             if IPLocationResponse.status_code == 200:          
-                IPData = getIPInfo(IPInfo, IPInfo2, IPLocation)               
+                IPData = get_ip_info(IPInfo, IPInfo2, IPLocation)               
             else:
                 IPLocation = "Not Found"
-                IPData = getIPInfo(IPInfo, IPInfo2, IPLocation)
+                IPData = get_ip_info(IPInfo, IPInfo2, IPLocation)
 
             print(
                 Fore.WHITE + Style.BRIGHT + "[" +
@@ -153,7 +153,7 @@ def main():
             )
 
             if exportFile != None:
-                exportInfo(exportFile, IPData)
+                export_info(exportFile, IPData)
 
     except KeyboardInterrupt:
         print(
