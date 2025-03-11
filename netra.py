@@ -12,17 +12,18 @@ from src.modules.utils.validation import validate_ip, validate_file
 from src.modules.utils.useragent import get_user_agent
 
 
-USERAGENT = get_user_agent()
+USER_AGENT = get_user_agent()
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0)', 
 }
+
 
 def main():
     try: 
         initialize()
 
         parser = ArgumentParser(
-        description="Netra: A tool for IP lookup and network information gathering (Version: 0.1.0)"
+            description="Netra: A tool for IP lookup and network information gathering (Version: 0.1.0)"
         )
         parser.add_argument(
             "--version",
