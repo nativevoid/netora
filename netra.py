@@ -47,11 +47,11 @@ def main():
 
         args = parser.parse_args()
 
-        targetIP = args.target  
-        exportFile = args.output
+        target_ip = args.target  
+        export_file = args.output
 
         time.sleep(2)
-        if not validate_ip(targetIP):
+        if not validate_ip(target_ip):
             print(
                 Fore.WHITE + Style.BRIGHT + "\n[" +
                 Fore.RED + "!" +
@@ -61,7 +61,7 @@ def main():
             )
             sys.exit(1)
 
-        if exportFile != None and not validate_file(exportFile):
+        if export_file != None and not validate_file(export_file):
             print(
                 Fore.WHITE + Style.BRIGHT + "\n[" +
                 Fore.RED + "!" +
@@ -71,8 +71,8 @@ def main():
             )
             sys.exit(1)    
    
-        response = requests.get(f"https://ipapi.co/{targetIP}/json")
-        response2 = requests.get(f"https://api.db-ip.com/v2/free/{targetIP}")
+        response = requests.get(f"https://ipapi.co/{target_ip}/json")
+        response2 = requests.get(f"https://api.db-ip.com/v2/free/{target_ip}")
 
         if response.status_code == 200 and response2.status_code == 200:
             IPInfo = response.json()
@@ -98,8 +98,7 @@ def main():
             time.sleep(1.5)
 
             print(
-                Fore.GREEN + "\n\n\n" +
-                "Target:" +
+                Fore.GREEN + "\n\n\n" + "Target:" +
                 Fore.WHITE + Style.BRIGHT +  f" {IPData['ip']}" + "\n" + Style.RESET_ALL + 
 
                 Fore.GREEN + "IP version:" +
@@ -153,8 +152,8 @@ def main():
                 flush=True
             )
 
-            if exportFile != None:
-                export_info(exportFile, IPData)
+            if export_file != None:
+                export_info(export_file, IPData)
 
     except KeyboardInterrupt:
         print(
