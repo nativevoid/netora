@@ -8,8 +8,8 @@ src_dir = os.path.join(current_dir, "..")
 src_dir = os.path.normpath(src_dir)
 sys.path.append(os.path.normpath(src_dir))
 
-from src.modules.utils.connection import checkConnection
-from src.modules.utils.validation import validateIP
+from src.modules.utils.connection import check_connection
+from src.modules.utils.validation import validate_ip
 
 targetIP = "8.8.8.8"
 
