@@ -57,7 +57,6 @@ python netra.py --target 178.157.253.24 --output test.txt
 python netra.py --target 178.157.253.24 --output test.md
 ```
 
-<br><br>
 ### Feature Requests & Bug Reporting
 
 Want to suggest a new feature? Open a request using our [Feature Request Template](../.github/ISSUE_TEMPLATE/feature-request.yaml).
