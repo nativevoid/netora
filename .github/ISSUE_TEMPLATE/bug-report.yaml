@@ -37,7 +37,7 @@ body:
     id: extra-info
     attributes:
       label: Additional Information
-      description: Any other details, logs, or screenshots?
+      description: Any other details, logs or screenshots?
     validations:
       required: false
   - type: checkboxes

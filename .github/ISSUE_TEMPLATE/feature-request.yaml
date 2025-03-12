@@ -11,7 +11,7 @@ body:
     attributes:
       label: Feature Description
       description: Explain the feature or improvement you are suggesting.
-      placeholder: I would like the tool to support...
+      placeholder: I would like Netra to be able to...
     validations:
       required: true
   - type: checkboxes
