@@ -75,18 +75,18 @@ def main():
         response2 = requests.get(f"https://api.db-ip.com/v2/free/{target_ip}")
 
         if response.status_code == 200 and response2.status_code == 200:
-            IPInfo = response.json()
-            IPInfo2 = response2.json()
+            ip_info = response.json()
+            ip_info2 = response2.json()
 
-            IPData = get_ip_info(IPInfo, IPInfo2)
+            IPData = get_ip_info(ip_info, ip_info2)
             IPLocation = f"https://www.openstreetmap.org/?mlat={IPData['latitude']}&mlon={IPData['longitude']}"
             IPLocationResponse = requests.get(IPLocation, headers=headers)
 
             if IPLocationResponse.status_code == 200:          
-                IPData = get_ip_info(IPInfo, IPInfo2, IPLocation)               
+                IPData = get_ip_info(ip_info, ip_info2, IPLocation)               
             else:
                 IPLocation = "Not Found"
-                IPData = get_ip_info(IPInfo, IPInfo2, IPLocation)
+                IPData = get_ip_info(ip_info, ip_info, IPLocation)
 
             print(
                 Fore.WHITE + Style.BRIGHT + "[" +
