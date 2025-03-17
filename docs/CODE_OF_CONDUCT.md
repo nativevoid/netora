@@ -29,4 +29,4 @@ Community leaders will enforce these standards by taking appropriate action. Thi
 
 ## Reporting
 
-If you encounter unacceptable behavior, please report it to [contact@example.com]. All reports will be handled fairly and privately.
+If you encounter unacceptable behavior, please report it to [Email Us](mailto:0x4E56@proton.me+Nativevoid@proton.me). All reports will be handled fairly and privately.
