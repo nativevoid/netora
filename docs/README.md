@@ -57,6 +57,33 @@ python netra.py --target 178.157.253.24 --output test.txt
 python netra.py --target 178.157.253.24 --output test.md
 ```
 
+```console
+
+
+$$\   $$\            $$\
+$$$\  $$ |           $$ |
+$$$$\ $$ | $$$$$$\ $$$$$$\    $$$$$$\  $$$$$$\
+$$ $$\$$ |$$  __$$\_$$  _|  $$  __$$\ \____$$\
+$$ \$$$$ |$$$$$$$$ | $$ |    $$ |  \__|$$$$$$$ |
+$$ |\$$$ |$$   ____| $$ |$$\ $$ |     $$  __$$ |
+$$ | \$$ |\$$$$$$$\  \$$$$  |$$ |     \$$$$$$$ |
+\__|  \__| \_______|  \____/ \__|      \_______|
+
+
+
+===============================================================================================
+usage: netra.py [-h] [--version] -trg TARGET [-o OUTPUT]
+
+Netra: A tool for IP lookup and network information gathering (Version: 0.1.0)
+
+options:
+  -h, --help            show this help message and exit
+  --version             Display version information.
+  -trg, --target TARGET
+                        IP address for location and network info lookup.
+  -o, --output OUTPUT   Output file to save results (.txt or .md only).
+```
+
 <br>
 
 ### Feature Requests & Bug Reporting
