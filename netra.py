@@ -78,15 +78,15 @@ def main():
             ip_info = response.json()
             ip_info2 = response2.json()
 
-            IPData = get_ip_info(ip_info, ip_info2)
-            IPLocation = f"https://www.openstreetmap.org/?mlat={IPData['latitude']}&mlon={IPData['longitude']}"
-            IPLocationResponse = requests.get(IPLocation, headers=headers)
+            ip_data = get_ip_info(ip_info, ip_info2)
+            ip_location = f"https://www.openstreetmap.org/?mlat={ip_data['latitude']}&mlon={ip_data['longitude']}"
+            ip_location_response = requests.get(ip_location, headers=headers)
 
-            if IPLocationResponse.status_code == 200:          
-                IPData = get_ip_info(ip_info, ip_info2, IPLocation)               
+            if ip_location_response.status_code == 200:          
+                ip_data = get_ip_info(ip_info, ip_info2, ip_location)               
             else:
-                IPLocation = "Not Found"
-                IPData = get_ip_info(ip_info, ip_info, IPLocation)
+                ip_location = "Not Found"
+                ip_data = get_ip_info(ip_info, ip_info, ip_location)
 
             print(
                 Fore.WHITE + Style.BRIGHT + "[" +
@@ -99,59 +99,59 @@ def main():
 
             print(
                 Fore.GREEN + "\n\n\n" + "Target:" +
-                Fore.WHITE + Style.BRIGHT +  f" {IPData['ip']}" + "\n" + Style.RESET_ALL + 
+                Fore.WHITE + Style.BRIGHT +  f" {ip_data['ip']}" + "\n" + Style.RESET_ALL + 
 
                 Fore.GREEN + "IP version:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['ipv']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['ipv']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "ISP:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['isp']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['isp']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Continent:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['continent_name']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['continent_name']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Continent code:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['continent_code']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['continent_code']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Country:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['country']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['country']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Country code:" + 
-                Fore.WHITE + Style.BRIGHT + f" {IPData['country_code']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['country_code']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Country capital:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['country_capital']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['country_capital']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Phone code:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['phone_code']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['phone_code']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "City:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['city']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['city']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Latitude:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['latitude']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['latitude']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Longitude:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['longitude']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['longitude']}" + "\n" + Style.RESET_ALL +
              
                 Fore.GREEN + "Location link:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['location_link']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['location_link']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Currency name:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['currency_name']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['currency_name']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Currency symbol:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['currency_symbol']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['currency_symbol']}" + "\n" + Style.RESET_ALL +
 
                 Fore.GREEN + "Local time:" +
-                Fore.WHITE + Style.BRIGHT + f" {IPData['local_time']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + f" {ip_data['local_time']}" + "\n" + Style.RESET_ALL +
              
                 Fore.GREEN + "\n\n\n" + f"{'=' * 95}" + "\n" + Style.RESET_ALL,  
                 flush=True
             )
 
             if export_file != None:
-                export_info(export_file, IPData)
+                export_info(export_file, ip_data)
 
     except KeyboardInterrupt:
         print(
