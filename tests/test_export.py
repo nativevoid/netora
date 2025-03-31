@@ -5,7 +5,6 @@ import sys
 current_dir = os.path.dirname(__file__)
 src_dir = os.path.join(current_dir, "..")
 
-src_dir = os.path.normpath(src_dir)
 sys.path.append(os.path.normpath(src_dir))
 
 from src.modules.utils.export import export_info
