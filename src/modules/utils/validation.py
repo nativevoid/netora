@@ -1,6 +1,5 @@
 import ipaddress
 
-
 def validate_ip(target_ip):
     parts = target_ip.split(".")
     return ( 
