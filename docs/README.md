@@ -47,14 +47,10 @@ pip install -r requirements.txt
 python netra.py --target 178.157.253.24
 ```
 
-**Export results to a .txt or .md file**
+**Export results to a file**
 
 ```bash
 python netra.py --target 178.157.253.24 --output test.txt
-```
-
-```bash
-python netra.py --target 178.157.253.24 --output test.md
 ```
 
 &nbsp;
