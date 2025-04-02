@@ -8,7 +8,7 @@ from colorama import Style, Fore
 from src.modules.core.getinfo import get_ip_info
 from src.modules.utils.initialize import initialize
 from src.modules.utils.export import export_info
-from src.modules.utils.validation import validate_ip, validate_file
+from src.modules.utils.validation import validate_ip
 from src.modules.utils.useragent import get_user_agent
 
 
@@ -84,6 +84,12 @@ def main():
             else:
                 ip_location = "Not Found"
                 ip_data = get_ip_info(ip_info, ip_info, ip_location)
+
+            results_count = len(ip_data)
+
+            for ip, info in ip_data.items():
+                if "Not Found" in str(info):
+                    results_count -= 1
 
             time.sleep(2.5)
             print(
@@ -191,9 +197,13 @@ def main():
                 + Fore.GREEN + "+"
                 + Fore.WHITE + "]" 
                 + Fore.GREEN + " Local time:" 
-                + Style.RESET_ALL + f" {ip_data['local_time']}" + "\n",
-             
-               # "\n\n\n" + f"{'=' * 95}" + "\n" + Style.RESET_ALL,  
+                + Style.RESET_ALL + f" {ip_data['local_time']}" + "\n\n" +
+                
+                Fore.GREEN + Style.BRIGHT + "["
+                + Fore.BLUE + "*"
+                + Fore.GREEN + "]"
+                + f" IP lookup completed with {Fore.WHITE}{results_count}{Fore.GREEN} results" 
+                + Style.RESET_ALL,
                 flush=True
             )
 
