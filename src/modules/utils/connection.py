@@ -13,16 +13,34 @@ def check_connection(host):
         if os.name == "nt":      
             if "Received = 1" in output:
                 pass
+
+            else:
+                print(
+                    Fore.WHITE + Style.BRIGHT + "["
+                    + Fore.RED + "!" + Fore.WHITE + "]"
+                    + Fore.RED + " Error:"
+                    + Style.RESET_ALL + " No internet connection"
+                )        
+
         else:
             if "1 packets transmitted, 1 received" in output:
-                pass  
+                pass 
 
-    except subprocess.CalledProcessError:
+            else:
+                print(
+                    Fore.WHITE + Style.BRIGHT + "["
+                    + Fore.RED + "!" + Fore.WHITE + "]"
+                    + Fore.RED + " Error:"
+                    + Fore.WHITE + " No internet connection"
+                    + Style.RESET_ALL
+                )  
+
+    except subprocess.CalledProcessError as error:
         print(
-            Fore.WHITE + Style.BRIGHT + "[" +
-            Fore.RED + "!" +
-            Fore.WHITE + Style.BRIGHT + "]" + Style.RESET_ALL +
-            Fore.RED + " Error:" +
-            Fore.WHITE + Style.BRIGHT + " No internet connection" + Style.RESET_ALL        
+            Fore.WHITE + Style.BRIGHT + "["
+            + Fore.RED + "!" + Fore.WHITE + "]"
+            + Fore.RED + " Error:"
+            + Fore.WHITE + f" {error}"
+            + Style.RESET_ALL
         )
         sys.exit(1)

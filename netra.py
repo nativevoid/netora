@@ -32,45 +32,42 @@ def main():
             help="Display version information.",
         )
         parser.add_argument(
-            "-trg",
-            "--target",
-            type=str,
-            required=True,
+            "ip",
+            metavar="IP_ADDRESS",
+            action="store",
             help="IP address for location and network info lookup.",
         )
         parser.add_argument(
             "-o",
             "--output", 
             type=str, 
-            help="Output file to save results (.txt or .md only).",
+            help="Output file to save results.",
         )
 
         args = parser.parse_args()
 
-        target_ip = args.target  
+        target_ip = args.ip  
         export_file = args.output
 
         time.sleep(2)
         if not validate_ip(target_ip):
             print(
-                Fore.WHITE + Style.BRIGHT + "\n[" +
-                Fore.RED + "!" +
-                Fore.WHITE + Style.BRIGHT + "]" + Style.RESET_ALL +
-                Fore.RED + " Error:" +
-                Fore.WHITE + Style.BRIGHT + " Invalid IP address" + Style.RESET_ALL
+                Fore.WHITE + Style.BRIGHT + "\n["
+                + Fore.RED + "!" + Fore.WHITE + "]"
+                + Fore.RED + " Error:"
+                + Style.RESET_ALL + " Invalid IP address" 
             )
             sys.exit(1)
 
-        if export_file != None and not validate_file(export_file):
-            print(
-                Fore.WHITE + Style.BRIGHT + "\n[" +
-                Fore.RED + "!" +
-                Fore.WHITE + Style.BRIGHT + "]" + Style.RESET_ALL +
-                Fore.RED + " Error:" +
-                Fore.WHITE + Style.BRIGHT + " Invalid file extension" + Style.RESET_ALL
-            )
-            sys.exit(1)    
-   
+        print(
+            Fore.GREEN + Style.BRIGHT + "["
+            + Fore.BLUE + "*" 
+            + Fore.GREEN + "]"
+            + " Retrieving" + Fore.WHITE 
+            + " IP" + Fore.GREEN + " information"
+            + Style.RESET_ALL
+        )
+
         response = requests.get(f"https://ipapi.co/{target_ip}/json")
         response2 = requests.get(f"https://api.db-ip.com/v2/free/{target_ip}")
 
@@ -88,83 +85,131 @@ def main():
                 ip_location = "Not Found"
                 ip_data = get_ip_info(ip_info, ip_info, ip_location)
 
+            time.sleep(2.5)
             print(
-                Fore.WHITE + Style.BRIGHT + "[" +
-                Fore.GREEN + "+" +
-                Fore.WHITE + Style.BRIGHT + "]" + Style.RESET_ALL +
-                Fore.GREEN + " Data" +
-                Fore.WHITE + Style.BRIGHT + " retrieved successfully" + Style.RESET_ALL
+                Fore.WHITE + Style.BRIGHT + "\n[" 
+                + Fore.GREEN + "+" 
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " Data"
+                + Fore.WHITE + " retrieved successfully"
+                + Style.RESET_ALL
             )
             time.sleep(1.5)
 
             print(
-                Fore.GREEN + "\n\n\n" + "Target:" +
-                Fore.WHITE + Style.BRIGHT +  f" {ip_data['ip']}" + "\n" + Style.RESET_ALL + 
+                Fore.WHITE + Style.BRIGHT + "\n\n" + "[" 
+                + Fore.GREEN + "+" 
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " Target:" 
+                + Style.RESET_ALL +  f" {ip_data['ip']}" + "\n" + 
 
-                Fore.GREEN + "IP version:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['ipv']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " IP version:" 
+                + Style.RESET_ALL + f" {ip_data['ipv']}" + "\n" +
 
-                Fore.GREEN + "ISP:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['isp']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " ISP:" 
+                + Style.RESET_ALL + f" {ip_data['isp']}" + "\n" +
 
-                Fore.GREEN + "Continent:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['continent_name']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " Continent:" 
+                + Style.RESET_ALL + f" {ip_data['continent_name']}" + "\n" +
 
-                Fore.GREEN + "Continent code:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['continent_code']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " Continent code:" 
+                + Style.RESET_ALL + f" {ip_data['continent_code']}" + "\n" +
 
-                Fore.GREEN + "Country:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['country']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " Country:" 
+                + Style.RESET_ALL + f" {ip_data['country']}" + "\n" +
 
-                Fore.GREEN + "Country code:" + 
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['country_code']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]"
+                + Fore.GREEN + " Country code:" 
+                + Style.RESET_ALL + f" {ip_data['country_code']}" + "\n" +
 
-                Fore.GREEN + "Country capital:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['country_capital']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Country capital:" 
+                + Style.RESET_ALL + f" {ip_data['country_capital']}" + "\n" +
 
-                Fore.GREEN + "Phone code:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['phone_code']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Phone code:" 
+                + Style.RESET_ALL + f" {ip_data['phone_code']}" + "\n" +
 
-                Fore.GREEN + "City:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['city']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " City:" 
+                + Style.RESET_ALL + f" {ip_data['city']}" + "\n" +
 
-                Fore.GREEN + "Latitude:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['latitude']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Latitude:" 
+                + Style.RESET_ALL + f" {ip_data['latitude']}" + "\n" +
 
-                Fore.GREEN + "Longitude:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['longitude']}" + "\n" + Style.RESET_ALL +
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Longitude:" 
+                + Style.RESET_ALL + f" {ip_data['longitude']}" + "\n" +
+
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Location link:" 
+                + Style.RESET_ALL + f" {ip_data['location_link']}" + "\n" +
+
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Currency name:" 
+                + Style.RESET_ALL + f" {ip_data['currency_name']}" + "\n" +
+
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Currency symbol:" 
+                + Style.RESET_ALL + f" {ip_data['currency_symbol']}" + "\n" +
+
+                Fore.WHITE + Style.BRIGHT + "["
+                + Fore.GREEN + "+"
+                + Fore.WHITE + "]" 
+                + Fore.GREEN + " Local time:" 
+                + Style.RESET_ALL + f" {ip_data['local_time']}" + "\n",
              
-                Fore.GREEN + "Location link:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['location_link']}" + "\n" + Style.RESET_ALL +
-
-                Fore.GREEN + "Currency name:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['currency_name']}" + "\n" + Style.RESET_ALL +
-
-                Fore.GREEN + "Currency symbol:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['currency_symbol']}" + "\n" + Style.RESET_ALL +
-
-                Fore.GREEN + "Local time:" +
-                Fore.WHITE + Style.BRIGHT + f" {ip_data['local_time']}" + "\n" + Style.RESET_ALL +
-             
-                Fore.GREEN + "\n\n\n" + f"{'=' * 95}" + "\n" + Style.RESET_ALL,  
+               # "\n\n\n" + f"{'=' * 95}" + "\n" + Style.RESET_ALL,  
                 flush=True
             )
 
-            if export_file != None:
+            if export_file is not None:
                 export_info(export_file, ip_data)
 
     except KeyboardInterrupt:
         print(
-            Fore.WHITE + Style.BRIGHT + "\n[" +
-            Fore.RED + "!" +
-            Fore.WHITE + "]" + Style.RESET_ALL +
-            Fore.RED + " Error:" +
-            Fore.WHITE + Style.BRIGHT + " Keyboard interrupt detected" + 
-            Fore.WHITE + Style.BRIGHT + "\n[" +
-            Fore.RED + Style.BRIGHT + "!" +
-            Fore.WHITE + "]" + Style.RESET_ALL +
-            Fore.RED + " Exiting..." + Style.RESET_ALL
+            Fore.WHITE + Style.BRIGHT + "\n[" 
+            + Fore.YELLOW + "-" 
+            + Fore.WHITE + "]"
+            + Fore.YELLOW + " Keyboard interrupt detected." 
+            + Fore.WHITEL + " Exiting program..."
+            + Style.RESET_ALL 
         )
+        time.sleep(1.5)
         sys.exit(1)
 
 if __name__ == "__main__":
