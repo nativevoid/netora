@@ -107,8 +107,8 @@ def main():
 
                 results_count = len(ip_data)
 
-                for ip, info in ip_data.items():
-                    if "Not Found" in str(info):
+                for attribute, lookup_result in ip_data.items():
+                    if "Not Found" in str(lookup_result):
                         results_count -= 1
 
                 time.sleep(2.5)
