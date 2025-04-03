@@ -13,19 +13,17 @@ def check_connection(host):
         if os.name == "nt":      
             if "Received = 1" in output:
                 pass
-
             else:
                 print(
                     Fore.WHITE + Style.BRIGHT + "["
                     + Fore.RED + "!" + Fore.WHITE + "]"
                     + Fore.RED + " Error:"
-                    + Style.RESET_ALL + " No internet connection"
+                    + Fore.WHITE + " No internet connection"
+                    + Style.RESET_ALL
                 )        
-
         else:
             if "1 packets transmitted, 1 received" in output:
                 pass 
-
             else:
                 print(
                     Fore.WHITE + Style.BRIGHT + "["

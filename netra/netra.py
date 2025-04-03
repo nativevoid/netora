@@ -1,27 +1,19 @@
 from argparse import ArgumentParser
+import os
 import requests
 import sys
 import time
 
 from colorama import Style, Fore, init
 
-from src.modules.core.getinfo import get_ip_info
-from src.modules.utils.initialize import initialize
-from src.modules.utils.export import export_info
-from src.modules.utils.validation import validate_ip
-from src.modules.utils.useragent import get_user_agent
-
-
-USER_AGENT = get_user_agent()
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0)', 
-}
+from getinfo import get_ip_info
+from netra.validation import validate_ip
+from netra.connection import check_connection
 
 
 def main():
     try: 
-        initialize()
-
+        check_connection("8.8.8.8")
         parser = ArgumentParser(
             description="Netra: A tool for IP lookup and network information gathering (Version: 0.1.0)"
         )
@@ -59,7 +51,6 @@ def main():
         )
 
         args = parser.parse_args()
-        export_file = args.output
 
         if args.no_color:
             init(strip=True, convert=False)
@@ -106,7 +97,7 @@ def main():
 
                 ip_data = get_ip_info(ip_info, ip_info2)
                 ip_location = f"https://www.openstreetmap.org/?mlat={ip_data['latitude']}&mlon={ip_data['longitude']}"
-                ip_location_response = requests.get(ip_location, headers=headers)
+                ip_location_response = requests.get(ip_location)
 
                 if ip_location_response.status_code == 200:          
                     ip_data = get_ip_info(ip_info, ip_info2, ip_location)               
@@ -236,8 +227,21 @@ def main():
                     flush=True
                 )
 
-                if export_file is not None:
-                    export_info(export_file, ip_data, results_count)
+                if args.output is not None:
+                   with open(args.output, "w") as result_file:
+                      for key, value in info.items():
+                         result_file.write(f"{key}: {value}\n")
+                      result_file.write(f"\n[*] IP lookup completed with {results_count} results")
+
+                elif args.folderoutput:
+                    result_file = f"{ip_data['ip']}.txt"
+                    os.makedirs(args.folderoutput, exist_ok=True) 
+                    result_file = os.path.join(args.folderoutput, result_file)  
+
+                    with open(args.output, "w") as result_file: 
+                        for key, value in info.items(): 
+                            result_file.write(f"{key}: {value}\n")   
+                        result_file.write(f"\n[*] IP lookup completed with {results_count} results")
 
     except KeyboardInterrupt:
         print(

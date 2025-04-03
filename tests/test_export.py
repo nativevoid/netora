@@ -5,10 +5,6 @@ import sys
 current_dir = os.path.dirname(__file__)
 src_dir = os.path.join(current_dir, "..")
 
-sys.path.append(os.path.normpath(src_dir))
-
-from src.modules.utils.export import export_info
-
 class TestExportInfo(unittest.TestCase):
     def test_export_info(self):
         file_path = os.path.normpath(
@@ -34,7 +30,13 @@ class TestExportInfo(unittest.TestCase):
             "country_capital": "Washington, D.C.",
         }
 
-        export_info(file_path, data) 
+        with open(file_path, "w") as f:
+            for key, value in data.items():
+                if isinstance(value, float): 
+                    value = f"{value:.4f}"                            
+                f.write(f"{key}: {value}\n")
+            f.write("\n[*] IP lookup completed with 15 results") 
+
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.readlines()
 

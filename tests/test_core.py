@@ -7,8 +7,8 @@ src_dir = os.path.join(current_dir, "..")
 
 sys.path.append(os.path.normpath(src_dir))
 
-from src.modules.utils.connection import check_connection
-from src.modules.utils.validation import validate_ip
+from netra.connection import check_connection
+from netra.validation import validate_ip
 
 target_ip = "8.8.8.8"
 
