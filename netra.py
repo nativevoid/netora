@@ -68,7 +68,7 @@ def main():
 
         if args.output is not None and len(args.ip) != 1:
             print(
-                Fore.WHITE + Style.BRIGHT + "\n["
+                Fore.WHITE + Style.BRIGHT + "["
                 + Fore.RED + "!" + Fore.WHITE + "]"
                 + Fore.RED + " Error:"
                 + Fore.WHITE + " You can only use --output with a single username" 
@@ -80,7 +80,7 @@ def main():
             time.sleep(2)
             if not validate_ip(target_ip):
                 print(
-                    Fore.WHITE + Style.BRIGHT + "\n["
+                    Fore.WHITE + Style.BRIGHT + "["
                     + Fore.RED + "!" + Fore.WHITE + "]"
                     + Fore.RED + " Error:"
                     + Fore.WHITE  + " Invalid IP address" 
