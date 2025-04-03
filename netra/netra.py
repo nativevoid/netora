@@ -229,8 +229,8 @@ def main():
 
                 if args.output is not None:
                    with open(args.output, "w") as result_file:
-                      for key, value in info.items():
-                         result_file.write(f"{key}: {value}\n")
+                      for attribute, lookup_result in ip_data.items():
+                         result_file.write(f"{attribute}: {lookup_result}\n")
                       result_file.write(f"\n[*] IP lookup completed with {results_count} results")
 
                 elif args.folderoutput:
@@ -239,8 +239,8 @@ def main():
                     result_file = os.path.join(args.folderoutput, result_file)  
 
                     with open(args.output, "w") as result_file: 
-                        for key, value in info.items(): 
-                            result_file.write(f"{key}: {value}\n")   
+                        for attribute, lookup_result in ip_data.items(): 
+                            result_file.write(f"{attribute}: {lookup_result}\n")   
                         result_file.write(f"\n[*] IP lookup completed with {results_count} results")
 
     except KeyboardInterrupt:
