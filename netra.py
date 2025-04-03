@@ -61,7 +61,7 @@ def main():
 
         print(
             Fore.GREEN + Style.BRIGHT + "["
-            + Fore.BLUE + "*" 
+            + Fore.YELLOW + "*" 
             + Fore.GREEN + "]"
             + " Retrieving" + Fore.WHITE 
             + " IP" + Fore.GREEN + " information"
@@ -200,7 +200,7 @@ def main():
                 + Style.RESET_ALL + f" {ip_data['local_time']}" + "\n\n" +
                 
                 Fore.GREEN + Style.BRIGHT + "["
-                + Fore.BLUE + "*"
+                + Fore.YELLOW + "*"
                 + Fore.GREEN + "]"
                 + f" IP lookup completed with {Fore.WHITE}{results_count}{Fore.GREEN} results" 
                 + Style.RESET_ALL,
@@ -215,9 +215,15 @@ def main():
             Fore.WHITE + Style.BRIGHT + "\n[" 
             + Fore.YELLOW + "-" 
             + Fore.WHITE + "]"
-            + Fore.YELLOW + " Keyboard interrupt detected." 
-            + Fore.WHITEL + " Exiting program..."
+            + Fore.YELLOW + " Keyboard interrupt detected" 
             + Style.RESET_ALL 
+        )
+        print(
+            Fore.GREEN + Style.BRIGHT + "["
+            + Fore.YELLOW + "*"
+            + Fore.GREEN + "]"
+            + Fore.GREEN + " Exiting program..."
+            + Style.RESET_ALL    
         )
         time.sleep(1.5)
         sys.exit(1)
