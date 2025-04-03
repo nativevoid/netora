@@ -4,7 +4,7 @@ import datetime
 import zoneinfo
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from netra.resources.currencies import currencies
+from netora.resources.currencies import currencies
 
 def sort_data(name, data):
     if name not in data or data[name] is None:
