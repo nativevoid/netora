@@ -1,7 +1,10 @@
+import os
+import sys
 import datetime
 import zoneinfo
 
-from resources.currencies import currencies
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from netra.resources.currencies import currencies
 
 def sort_data(name, data):
     if name not in data or data[name] is None:
@@ -27,7 +30,7 @@ def get_ip_info(ip_info, ip_info2, location_link=""):
 
     longitude = sort_data("longitude", ip_info)
     timezone = sort_data("timezone", ip_info)
-    
+
     country_capital = sort_data("country_capital", ip_info)
     currency_name = sort_data("currency_name", ip_info)
     

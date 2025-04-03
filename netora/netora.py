@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from argparse import ArgumentParser
 import os
 import requests
@@ -6,16 +8,17 @@ import time
 
 from colorama import Style, Fore, init
 
-from getinfo import get_ip_info
-from netra.validation import validate_ip
-from netra.connection import check_connection
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from netora.getinfo import get_ip_info
+from netora.validation import validate_ip
+from netora.connection import check_connection
 
 def main():
     try: 
         check_connection("8.8.8.8")
         parser = ArgumentParser(
-            description="Netra: A tool for IP lookup and network information gathering (Version: 0.1.0)"
+            description="Netora: Quickly uncover details and geolocation for any IP address (Version: 0.1.0)"
         )
         parser.add_argument(
             "--version",

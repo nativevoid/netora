@@ -1,3 +1,4 @@
 requests
 colorama
 zoneinfo  # Only needed for Python versions older than 3.9 (since it's in the standard library starting from Python 3.9)
+tzdata
