@@ -12,12 +12,7 @@
 
 ```console
 $ netora --help
-usage: sherlock [-h] [--version] [--verbose] [--folderoutput FOLDEROUTPUT]
-                [--output OUTPUT] [--tor] [--unique-tor] [--csv] [--xlsx]
-                [--site SITE_NAME] [--proxy PROXY_URL] [--json JSON_FILE]
-                [--timeout TIMEOUT] [--print-all] [--print-found] [--no-color]
-                [--browse] [--local] [--nsfw]
-                USERNAMES [USERNAMES ...]
+usage: 
 ```
 
 To search for only one IP address:
