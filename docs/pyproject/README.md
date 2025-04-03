@@ -1,6 +1,6 @@
 <p align=center>
   <br>
-  <a href="https://github.com/nativevoid/netora" target="_blank"><img src="https://github.com/nativevoid/netora/blob/main/docs/images/netora-logo.png" width="25%"/></a>
+  <a href="https://github.com/nativevoid/netora" target="_blank"><img src="https://github.com/nativevoid/netora/blob/main/docs/images/netora-banner.png" width="100%"/></a>
   <br>
   <strong><span>Quickly uncover details and geolocation for <strong>any</strong> IP address</span>
   <br><br>
