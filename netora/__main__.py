@@ -3,9 +3,9 @@
 import sys
 
 if __name__ == "__main__":
-    if sys.version_info < (3, 13):
-        print(f"Netra requires Python 3.13+\nYou are using Python {sys.version.split()[0]}, which is not supported.")
+    if sys.version_info < (3, 6):
+        print(f"Netora requires Python 3.6+\nYou are using Python {sys.version.split()[0]}, which is not supported.")
         sys.exit(1)
 
-    from netra import netra
-    netra.main()
+    from netora import netora
+    netora.main()
