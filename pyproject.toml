@@ -26,12 +26,11 @@ dependencies = [
     "colorama>=0.4.1"
 ]
 requires-python = ">=3.13"
-
-[project.urls]
 Homepage = "https://yourhomepage.com"
-"Bug Tracker" = "https://github.com/nativevoid/netora/issues"
 Repository = "https://github.com/nativevoid/netora"
 
+[project.urls]
+"Bug Tracker" = "https://github.com/nativevoid/netora/issues"
 
 [project.scripts]
 netra = 'netora.netora:main'
