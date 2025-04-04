@@ -26,7 +26,6 @@
 
 You can install Netora via pip or run it directly from the cloned repository.
 
----
 
 ### Cloning the repository
 
