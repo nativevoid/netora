@@ -55,7 +55,7 @@ You can install Netora via pip or run it directly from the cloned repository.
    ```
 
 
-### General usage
+## General usage
 
 To search for only one IP address:
 ```bash
