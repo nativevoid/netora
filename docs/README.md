@@ -17,7 +17,7 @@
 
 
 <p align="center">
-  <img src="/docs/images/demo.png">
+  <img src="/docs/images/netora-name.png">
 
 
 ---
