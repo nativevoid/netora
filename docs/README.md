@@ -26,11 +26,12 @@
 
 ### Installation
 
-**Install via pip**
+### Install via pip
+```bash
+pip install netora
+```
 
-`pip install netora`
-
-**Clone the repository**
+### Cloning a repository
 
 ```bash
 git clone https://github.com/nativevoid/Netra
