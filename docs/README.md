@@ -89,7 +89,7 @@ options:
 
 <br>
 
-### Feature Requests & Bug Reporting
+## Feature Requests & Bug Reporting
 
 Want to suggest a new feature? Open a request using our [Feature Request Template](../.github/ISSUE_TEMPLATE/feature-request.yaml).
 
@@ -97,7 +97,7 @@ Found a bug? Report it using our [Bug Report Template](../.github/ISSUE_TEMPLATE
 
 <br>
 
-### Disclaimer
+## Disclaimer
 
 This tool is for educational purposes only and is intended to help with IP lookups. Users are responsible for complying with applicable laws.
 
