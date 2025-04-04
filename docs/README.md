@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#installation">Installation</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
-  <a href="#usage">Usage</a>
+  <a href="#general usage">Usage</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
 </p>
 
