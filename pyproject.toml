@@ -3,8 +3,8 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "netora-project"
-version = "0.1.0"
+name = "netora"
+version = "0.1.1"
 description = "Quickly uncover details and geolocation for any IP address"
 authors = [{name = "nativevoid", email = "0x4E56@proton.me"}]
 maintainers = [{name = "nativevoid", email = "0x4E56@proton.me"}]
