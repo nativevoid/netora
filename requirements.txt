@@ -1,4 +1,4 @@
-requests
-colorama
-zoneinfo  # Only needed for Python versions older than 3.9 (since it's in the standard library starting from Python 3.9)
-tzdata
+requests>=2.25
+colorama>=0.4.6
+tzdata>=2025.2
+backports.zoneinfo>=0.2.1; python_version < "3.9"
