@@ -74,7 +74,7 @@ netora --help
 usage: netora [-h] [--version] [--folderoutput FOLDEROUTPUT] [--output OUTPUT] [--no-color]
               IP_ADDRESSES [IP_ADDRESSES ...]
 
-Netora: Quickly uncover details and geolocation for any IP address (Version: 0.1.0)
+Netora: Quickly uncover details and geolocation for any IP address (Version: 0.15.0)
 
 positional arguments:
   IP_ADDRESSES          One or more IP addresses for looking up location and network information.
