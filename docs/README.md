@@ -26,6 +26,10 @@
 
 ### Installation
 
+**Install via pip**
+
+`pip install netora`
+
 **Clone the repository**
 
 ```bash
@@ -33,52 +37,43 @@ git clone https://github.com/nativevoid/Netra
 cd Netra
 ```
 
+
 **Install requirements**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Usage
+### General usage
 
-**Lookup an IP address**
-
+To search for only one IP address:
 ```bash
-python netra.py --target 178.157.253.24
+netora 123.123.123.123
 ```
 
-**Export results to a file**
-
+To search for more than one IP address:
 ```bash
-python netra.py --target 178.157.253.24 --output test.txt
+netora 55.55.55.55 66.66.66.66 77.77.77.77
 ```
 
 &nbsp;
 ```console
+netora --help
+usage: netora [-h] [--version] [--folderoutput FOLDEROUTPUT] [--output OUTPUT] [--no-color]
+              IP_ADDRESSES [IP_ADDRESSES ...]
 
+Netora: Quickly uncover details and geolocation for any IP address (Version: 0.1.0)
 
-$$\   $$\            $$\
-$$$\  $$ |           $$ |
-$$$$\ $$ | $$$$$$\ $$$$$$\    $$$$$$\  $$$$$$\
-$$ $$\$$ |$$  __$$\_$$  _|  $$  __$$\ \____$$\
-$$ \$$$$ |$$$$$$$$ | $$ |    $$ |  \__|$$$$$$$ |
-$$ |\$$$ |$$   ____| $$ |$$\ $$ |     $$  __$$ |
-$$ | \$$ |\$$$$$$$\  \$$$$  |$$ |     \$$$$$$$ |
-\__|  \__| \_______|  \____/ \__|      \_______|
-
-
-
-===============================================================================================
-usage: netra.py [-h] [--version] -trg TARGET [-o OUTPUT]
-
-Netra: A tool for IP lookup and network information gathering (Version: 0.1.0)
+positional arguments:
+  IP_ADDRESSES          One or more IP addresses for looking up location and network information.
 
 options:
   -h, --help            show this help message and exit
   --version             Display version information.
-  -trg, --target TARGET
-                        IP address for location and network info lookup.
-  -o, --output OUTPUT   Output file to save results (.txt or .md only).
+  --folderoutput, -fo FOLDEROUTPUT
+                        Multiple IP addresses can be used, and the results will be saved in this folder.
+  --output, -o OUTPUT   Only one IP address can be used, and the result will be saved to this file.
+  --no-color            Don't color terminal output
 ```
 
 <br>
