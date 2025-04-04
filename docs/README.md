@@ -1,5 +1,3 @@
-# Netra
-
 <p align="center">
   <img src="/docs/images/netora-logo.png">
 </p>
