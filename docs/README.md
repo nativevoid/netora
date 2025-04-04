@@ -34,8 +34,8 @@ pip install netora
 ### Cloning a repository
 
 ```bash
-git clone https://github.com/nativevoid/Netra
-cd Netra
+git clone https://github.com/nativevoid/netora
+cd netora
 ```
 
 
