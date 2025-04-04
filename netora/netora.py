@@ -18,12 +18,12 @@ def main():
     try: 
         check_connection("8.8.8.8")
         parser = ArgumentParser(
-            description="Netora: Quickly uncover details and geolocation for any IP address (Version: 0.1.0)"
+            description="Netora: Quickly uncover details and geolocation for any IP address (Version: 0.1.8)"
         )
         parser.add_argument(
             "--version",
             action="version",
-            version="Netra v0.1.0",
+            version="Netra v0.1.8",
             help="Display version information.",
         )
         parser.add_argument(
