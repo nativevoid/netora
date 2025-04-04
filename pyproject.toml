@@ -22,8 +22,10 @@ classifiers = [
 ]
 
 dependencies = [
-    "requests>=2.22.0",
-    "colorama>=0.4.1"
+    "requests>=2.25",
+    "colorama>=0.4.6",
+    "tzdata>=2025.2",
+    "backports.zoneinfo>=0.2.1; python_version < '3.9'"
 ]
 
 [project.urls]
