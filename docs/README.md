@@ -58,7 +58,7 @@ You can install Netora via pip or run it directly from the cloned repository.
    ```
 
 > [!NOTE] 
-> You can install `netora` using either `pipx` or `pip`
+> You can install **netora** using either `pipx` or `pip`
 > ```bash
 > $ pipx install netora
 > ```
