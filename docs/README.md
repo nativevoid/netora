@@ -25,32 +25,30 @@ You can install Netora via pip or run it directly from the cloned repository.
 ### Cloning the repository
 
 1. Clone the repository:
-  ```bash
-  $ git clone https://github.com/nativevoid/netora
-  ```
-
+   ```bash
+   git clone https://github.com/nativevoid/netora
+   ```
 2. Install the required dependencies:
-  ```bash
-  $ pip install -r requirements.txt
-  ```
-   
+   ```bash
+   $ pip install -r requirements.txt
+   ```
 3. Run Netora:
-  ```bash
-  $ cd netora
-  $ python3 netora.py --version
-  ```
+   ```bash
+   $ cd netora
+   $ python3 netora.py --version
+   ```
 
 ### Installing via pip
 
 1. Install the `netora` package:
-  ```bash
-  $ pip install netora
-  ```
+   ```bash
+   pip install netora
 
 2. That's it! Now you can run it from anywhere:
-  ```bash
-  $ netora --version
-  ```
+   ```bash
+   $ netora --version
+   ```
+
 
 ## General usage
 
@@ -99,3 +97,5 @@ Found a bug? Report it using our [Bug Report Template](../.github/ISSUE_TEMPLATE
 This tool is for educational purposes only and is intended to help with IP lookups. Users are responsible for complying with applicable laws.
 
 By using this tool, you accept all risks associated with its use. Nativevoid is not liable for any consequences resulting from using this tool.
+
+
