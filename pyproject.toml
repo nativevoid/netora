@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "nativevoid.mintlify.app"
+"Homepage" = "https://nativevoid.mintlify.app"
 "Repository" = "https://github.com/nativevoid/netora"
 "Bug Tracker" = "https://github.com/nativevoid/netora/issues"
 
