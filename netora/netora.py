@@ -14,7 +14,7 @@ except ImportError:
     print(
         Fore.WHITE + Style.BRIGHT + "\n["
         + Fore.RED + "!" + Fore.WHITE + "]"
-        + "Error:"
+        + Fore.RED + " Error:"
         + Fore.WHITE + " Did you run netora with "
         + Fore.WHITE + "python3 sherlock/sherlock.py ...`?"
         + Style.RESET_ALL
