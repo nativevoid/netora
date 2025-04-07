@@ -26,7 +26,7 @@ You can install Netora via pip or run it directly from the cloned repository.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nativevoid/netora
+   $ git clone https://github.com/nativevoid/netora
    ```
 2. Install the required dependencies:
    ```bash
@@ -42,7 +42,7 @@ You can install Netora via pip or run it directly from the cloned repository.
 
 1. Install the `netora` package:
    ```bash
-   pip install netora
+   $ pip install netora
 
 2. That's it! Now you can run it from anywhere:
    ```bash
