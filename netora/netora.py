@@ -23,7 +23,7 @@ def main():
         parser.add_argument(
             "--version",
             action="version",
-            version="Netra v0.15.0",
+            version="Netora v0.15.0",
             help="Display version information.",
         )
         parser.add_argument(
