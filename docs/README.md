@@ -1,5 +1,3 @@
-![Banner](/docs/images/netora-banner.png)
-
 <p align="center">
   <img src="/docs/images/netora-logo.png">
 </p>
