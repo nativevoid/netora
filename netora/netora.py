@@ -14,14 +14,17 @@ except ImportError:
     print(
         Fore.WHITE + Style.BRIGHT + "\n["
         + Fore.RED + "!" + Fore.WHITE + "]"
-        + Fore.WHITE + " Did you run netora with"
-        + Style.RESET_ALL + "python3 sherlock/sherlock.py ...`?"
+        + "Error:"
+        + Fore.WHITE + " Did you run netora with "
+        + Fore.WHITE + "python3 sherlock/sherlock.py ...`?"
+        + Style.RESET_ALL
     )
     print(
         Fore.GREEN + Style.BRIGHT + "\n["
         + Fore.BLUE + "i" + Fore.GREEN + "]"
-        + Fore.GREEN + "This method is no longer supported. Refer to"
-        + "\033[4m https://nativevoid.mintlify.app/installation\033[24m for the current installation guide."
+        + Fore.GREEN + " This method is no longer supported. Refer to "
+        + Fore.WHITE + "\033[4mhttps://nativevoid.mintlify.app/installation\033[24m" 
+        + Fore.GREEN + " for the current installation guide."
         + Style.RESET_ALL
     )
     sys.exit(1)
