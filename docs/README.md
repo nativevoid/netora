@@ -40,7 +40,7 @@ You can install Netora via pip or run it directly from the cloned repository.
 3. Run Netora:
    ```bash
    $ cd netora
-   $ python netora.py 111.111.111.111
+   $ python3 netora.py --version
    ```
 
 ### Installing via pip
@@ -51,7 +51,7 @@ You can install Netora via pip or run it directly from the cloned repository.
 
 2. That's it! Now you can run it from anywhere:
    ```bash
-   $ netora 111.111.111.111
+   $ netora --version
    ```
 
 
