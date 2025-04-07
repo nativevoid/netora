@@ -15,11 +15,6 @@
 
 <br><br>
 
-
-<p align="center">
-  <img src="/docs/images/netora-name.png">
-
-
 ---
 
 ## Installation
