@@ -16,7 +16,7 @@ except ImportError:
         + Fore.RED + "!" + Fore.WHITE + "]"
         + Fore.RED + " Error:"
         + Fore.WHITE + " Did you run netora with "
-        + Fore.WHITE + "python3 netora/netora.py ...`?"
+        + Fore.WHITE + "`python3 netora/netora.py ...`?"
         + Style.RESET_ALL
     )
     print(
