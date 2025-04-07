@@ -70,6 +70,7 @@ To search for more than one IP address:
 netora 55.55.55.55 66.66.66.66 77.77.77.77
 ```
 
+&nbsp;
 ```console
 netora --help
 usage: netora [-h] [--version] [--folderoutput FOLDEROUTPUT] [--output OUTPUT] [--no-color]
